@@ -1,0 +1,25 @@
+services:
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: forklift-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=grafana-simple-json-datasource
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=grafana-simple-json-datasource
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./provisioning:/etc/grafana/provisioning
+      - ./dashboards:/var/lib/grafana/dashboards
+    networks:
+      - forklift-network
+
+volumes:
+  grafana-storage:
+
+networks:
+  forklift-network:
+    driver: bridge
+

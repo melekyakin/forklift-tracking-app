@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: forklift-postgres
+    environment:
+      - POSTGRES_DB=forklift
+      - POSTGRES_USER=admin-1
+      - POSTGRES_PASSWORD=123456
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - forklift-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: forklift-backend
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=forklift
+      - POSTGRES_USER=admin-1
+      - POSTGRES_PASSWORD=123456
+      - PORT=5005
+    ports:
+      - "5005:5005"
+    depends_on:
+      - postgres
+    networks:
+      - forklift-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: forklift-frontend
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - forklift-network
+
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: forklift-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=grafana-simple-json-datasource
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=grafana-simple-json-datasource
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    networks:
+      - forklift-network
+
+volumes:
+  db-data:
+  grafana-storage:
+
+networks:
+  forklift-network:
+    driver: bridge

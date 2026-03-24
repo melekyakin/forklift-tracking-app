@@ -1,0 +1,426 @@
+.raporlar-container {
+  padding: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.raporlar-container h2 {
+  background: linear-gradient(to right, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  letter-spacing: -0.8px;
+  padding: 60px 60px 0;
+  line-height: 1.2;
+  background: transparent;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+  .raporlar-container h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .raporlar-container h2 {
+    font-size: 24px;
+    padding: 40px 24px 0;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .raporlar-container h2 {
+    font-size: 20px;
+    padding: 32px 16px 0;
+    padding-bottom: 24px;
+  }
+}
+
+.istatistikler-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.istatistik-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.istatistik-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #60a5fa, #34d399);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.istatistik-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: #60a5fa;
+}
+
+.istatistik-card:hover::before {
+  transform: scaleX(1);
+}
+
+.istatistik-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.istatistik-icon.icon-box {
+  background: var(--corporate-blue);
+  position: relative;
+}
+
+.istatistik-icon.icon-box::before {
+  content: '📦';
+  font-size: 24px;
+}
+
+.istatistik-icon.icon-warning {
+  background: var(--warning);
+  position: relative;
+}
+
+.istatistik-icon.icon-warning::before {
+  content: '⚠';
+  font-size: 24px;
+  color: var(--primary-white);
+  font-weight: 700;
+}
+
+.istatistik-bilgi {
+  flex: 1;
+}
+
+.istatistik-bilgi h3 {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.istatistik-deger {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.8px;
+}
+
+@media (max-width: 768px) {
+  .istatistik-deger {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .istatistik-deger {
+    font-size: 20px;
+  }
+}
+
+.hareketler-section {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 0 60px 60px;
+}
+
+.hareketler-section h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.4px;
+}
+
+@media (max-width: 768px) {
+  .hareketler-section h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hareketler-section h3 {
+    font-size: 16px;
+  }
+}
+
+.filtreler {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.filtre-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtre-group label {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filtre-group input,
+.filtre-group select {
+  padding: 10px 14px;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: var(--transition);
+  font-family: inherit;
+  background: rgba(30, 41, 59, 0.5);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.filtre-group input:focus,
+.filtre-group select:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.filtre-actions {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.filtre-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+.hareketler-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.hareket-card {
+  background: rgba(51, 65, 85, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 3px solid #60a5fa;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-left: 3px solid #60a5fa;
+  transition: var(--transition);
+  margin-bottom: 12px;
+}
+
+.hareket-card:hover {
+  background: rgba(51, 65, 85, 0.5);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-color: #60a5fa;
+}
+
+.hareket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hareket-bilgi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hareket-bilgi h4 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.islem-tipi-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: var(--primary-white);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hareket-tarih {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.hareket-degisim {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 8px;
+}
+
+.hareket-degisim .onceki {
+  color: var(--accent-red);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hareket-degisim .ok {
+  color: var(--gray-400);
+  font-size: 16px;
+}
+
+.hareket-degisim .yeni {
+  color: var(--success);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hareket-aciklama {
+  margin-bottom: 8px;
+}
+
+.hareket-aciklama p {
+  color: #cbd5e1;
+  font-size: 13px;
+  margin: 0;
+  font-style: italic;
+}
+
+.hareket-forkliftci {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.hareket-forkliftci strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .istatistikler-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .raporlar-container h2 {
+    font-size: 24px;
+  }
+
+  .istatistikler-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filtreler {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .filtre-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filtre-actions button {
+    width: 100%;
+  }
+
+  .hareket-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hareketler-section {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hareketler-section {
+    padding: 20px;
+  }
+
+  .filtreler {
+    padding: 16px;
+  }
+}

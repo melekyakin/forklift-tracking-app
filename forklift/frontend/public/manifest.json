@@ -1,0 +1,43 @@
+{
+  "name": "Forklift Kasa Takip Sistemi",
+  "short_name": "Forklift Takip",
+  "description": "AI destekli forklift ve kasa takip sistemi - Bilgisayar Mühendisliği Bitirme Projesi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066CC",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Kasalar",
+      "short_name": "Kasalar",
+      "description": "Kasa listesini görüntüle",
+      "url": "/?tab=kasalar",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Analytics",
+      "short_name": "Analytics",
+      "description": "AI Analytics Dashboard",
+      "url": "/?tab=analytics",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
+

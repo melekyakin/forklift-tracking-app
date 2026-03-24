@@ -1,0 +1,40 @@
+{
+  "name": "forklift-kasa-takip",
+  "version": "1.0.0",
+  "description": "Kasa takip ve forkliftçi bildirim sistemi",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm run dev",
+    "install-all": "npm install && cd frontend && npm install",
+    "add-users": "node backend/scripts/addUsers.js"
+  },
+  "keywords": [
+    "forklift",
+    "kasa",
+    "takip"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "sharp": "^0.33.5",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "docx": "^9.5.1",
+    "md-to-pdf": "^5.2.5",
+    "nodemon": "^3.0.1"
+  }
+}

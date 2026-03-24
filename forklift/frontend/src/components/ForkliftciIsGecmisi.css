@@ -1,0 +1,293 @@
+.is-gecmisi-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.is-gecmisi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.is-gecmisi-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.is-gecmisi-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-export {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-export-csv {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-export-csv:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-export-excel {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-export-excel:hover {
+  background-color: #0b7dda;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.is-gecmisi-filtreler {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filtre-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filtre-grup label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.filtre-grup input,
+.filtre-grup select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filtre-grup input:focus,
+.filtre-grup select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.btn-filtre-temizle {
+  padding: 8px 16px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-filtre-temizle:hover {
+  background-color: #f57c00;
+  transform: translateY(-2px);
+}
+
+.is-gecmisi-tablo-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.is-gecmisi-tablo {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.is-gecmisi-tablo thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.is-gecmisi-tablo th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.is-gecmisi-tablo td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.is-gecmisi-tablo tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.is-gecmisi-tablo tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mesaj-cell {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.durum-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.durum-onaylandi {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.durum-reddedildi {
+  background-color: #f44336;
+  color: white;
+}
+
+.durum-beklemede {
+  background-color: #ff9800;
+  color: white;
+}
+
+.no-is-gecmisi {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 16px;
+}
+
+.is-gecmisi-istatistik {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.istatistik-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.istatistik-label {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.is-gecmisi-istatistik .istatistik-deger {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1c88;
+}
+
+.is-gecmisi-istatistik .istatistik-deger.onaylandi {
+  color: #4CAF50 !important;
+}
+
+.is-gecmisi-istatistik .istatistik-deger.reddedildi {
+  color: #f44336 !important;
+}
+
+.forkliftci-bilgi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.forkliftci-bilgi strong {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.forkliftci-bilgi .kullanici-adi {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.tarih-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.tarih-badge.onay {
+  background-color: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+  border: 1px solid rgba(46, 213, 115, 0.3);
+}
+
+.tarih-badge.red {
+  background-color: rgba(255, 71, 87, 0.2);
+  color: #ff4757;
+  border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.tarih-badge.tamamlandi {
+  background-color: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+@media (max-width: 768px) {
+  .is-gecmisi-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .is-gecmisi-filtreler {
+    flex-direction: column;
+  }
+
+  .filtre-grup {
+    width: 100%;
+  }
+
+  .is-gecmisi-tablo-wrapper {
+    overflow-x: scroll;
+  }
+
+  .is-gecmisi-istatistik {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

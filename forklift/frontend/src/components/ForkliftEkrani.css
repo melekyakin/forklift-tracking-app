@@ -1,0 +1,1252 @@
+.forklift-container {
+  padding: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.workstation-secim-wrapper {
+  margin-bottom: 48px;
+  padding: 0 60px;
+}
+
+.forklift-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  padding: 60px 60px 40px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Tab Menüsü */
+.forklift-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 0 60px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.forklift-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.forklift-tab {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.forklift-tab:hover {
+  color: #4CAF50;
+  background-color: #f5f5f5;
+}
+
+.forklift-tab.active {
+  color: #4CAF50;
+  border-bottom-color: #4CAF50;
+  background-color: #f9f9f9;
+}
+
+.tab-badge {
+  background-color: #f44336;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.forklift-header h2 {
+  background: linear-gradient(to right, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.forkliftci-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.hareket-durumu-gosterge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hareket-durumu-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hareket-durumu-badge.hareket-halinde {
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.hareket-durumu-badge.duruyor {
+  background-color: #f59e0b;
+  color: white;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.hareket-durumu-badge.bilinmiyor {
+  background-color: #6b7280;
+  color: white;
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3);
+}
+
+.mesafe-bilgisi {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .forklift-header h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .forklift-header h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forklift-header h2 {
+    font-size: 20px;
+  }
+}
+
+.forkliftci-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.forkliftci-info strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.hareket-durumu-gosterge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hareket-durumu-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hareket-durumu-badge.hareket-halinde {
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.hareket-durumu-badge.duruyor {
+  background-color: #f59e0b;
+  color: white;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.hareket-durumu-badge.bilinmiyor {
+  background-color: #6b7280;
+  color: white;
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3);
+}
+
+.mesafe-bilgisi {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.no-bildirim {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 120px 60px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 0 60px 60px;
+}
+
+.no-bildirim-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.no-bildirim-icon::before {
+  content: '✓';
+  color: var(--primary-white);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .no-bildirim-icon::before {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .no-bildirim-icon::before {
+    font-size: 28px;
+  }
+}
+
+.no-bildirim h3 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.4px;
+}
+
+.no-bildirim p {
+  color: var(--gray-600);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .no-bildirim h3 {
+    font-size: 20px;
+  }
+
+  .no-bildirim p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .no-bildirim h3 {
+    font-size: 18px;
+  }
+
+  .no-bildirim p {
+    font-size: 12px;
+  }
+}
+
+.bildirimler-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 60px 60px;
+}
+
+.bildirim-card {
+  background: var(--primary-white);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--accent-red);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--accent-red);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.bildirim-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent-red);
+  transform: scaleY(1);
+}
+
+.bildirim-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--accent-red);
+}
+
+.bildirim-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.bildirim-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: var(--warning);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bildirim-icon::before {
+  content: '!';
+  color: var(--primary-white);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.bildirim-bilgi {
+  flex: 1;
+}
+
+.bildirim-bilgi h3 {
+  color: var(--primary-black);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+@media (max-width: 768px) {
+  .bildirim-bilgi h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bildirim-bilgi h3 {
+    font-size: 15px;
+  }
+}
+
+.bildirim-workstation {
+  color: var(--gray-600);
+  font-size: 13px;
+  font-weight: 500;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bildirim-tarih {
+  color: var(--gray-500);
+  font-size: 12px;
+}
+
+.bildirim-mesaj {
+  background: var(--gray-50);
+  border-left: 3px solid var(--warning);
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.bildirim-mesaj p {
+  color: var(--gray-900);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .bildirim-mesaj p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bildirim-mesaj p {
+    font-size: 13px;
+  }
+}
+
+.kasa-detay {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.detay-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detay-item .label {
+  color: var(--gray-600);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.detay-item .value {
+  color: var(--primary-black);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .detay-item .value {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detay-item .value {
+    font-size: 15px;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+  border-radius: 4px;
+}
+
+.bildirim-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.btn-onayla, .btn-reddet, .btn-kapat {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+.btn-onayla {
+  background: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.btn-onayla:hover {
+  background: var(--gray-800);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-reddet {
+  background: var(--primary-white);
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red);
+}
+
+.btn-reddet:hover {
+  background: var(--accent-red);
+  color: var(--primary-white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-kapat {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: var(--primary-white);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-kapat:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.bildirim-sure {
+  color: var(--gray-600);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: var(--gray-50);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bildirim-tamamlandi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tamamlandi-badge {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: var(--primary-white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Kapatılmayı Bekleyen İşler Sayfası */
+.kapatilmayi-bekleyen-container {
+  padding: 0 60px 60px;
+}
+
+.kapatilmayi-bekleyen-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.kapatilmayi-bekleyen-header h2 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.kapatilmayi-bekleyen-aciklama {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.bildirim-ek-bilgi {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: var(--gray-50);
+  border-radius: 6px;
+  border-left: 3px solid var(--warning);
+}
+
+.gecen-sure-bilgisi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gecen-sure-label {
+  color: var(--gray-600);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gecen-sure-deger {
+  color: var(--primary-black);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 12px;
+  background: var(--warning);
+  color: var(--primary-white);
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .kapatilmayi-bekleyen-container {
+    padding: 0 24px 40px;
+  }
+
+  .kapatilmayi-bekleyen-header h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kapatilmayi-bekleyen-container {
+    padding: 0 16px 32px;
+  }
+
+  .kapatilmayi-bekleyen-header h2 {
+    font-size: 18px;
+  }
+
+  .kapatilmayi-bekleyen-aciklama {
+    font-size: 13px;
+  }
+
+  .gecen-sure-bilgisi {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+/* Forklift Görsel Yükleme */
+.forklift-gorsel-yukleme-section {
+  margin: 0 60px 48px;
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gorsel-yukleme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.gorsel-yukleme-header h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.4px;
+}
+
+.btn-gorsel-yukle {
+  background: linear-gradient(135deg, #2563eb, #059669);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-gorsel-yukle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.gorsel-yukleme-card {
+  margin-top: 24px;
+}
+
+.gorsel-yukleme-alan {
+  margin-bottom: 20px;
+}
+
+.gorsel-yukleme-label {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  border: 2px dashed rgba(51, 65, 85, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  overflow: hidden;
+  position: relative;
+  background: rgba(30, 41, 59, 0.3);
+}
+
+.gorsel-yukleme-label:hover {
+  border-color: #60a5fa;
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.gorsel-yukleme-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #94a3b8;
+}
+
+.upload-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.gorsel-yukleme-placeholder p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.gorsel-onizleme {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.gorsel-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-analyze {
+  background: linear-gradient(135deg, #2563eb, #059669);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-analyze:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn-analyze:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  background: rgba(30, 41, 59, 0.5);
+  color: #cbd5e1;
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  backdrop-filter: blur(10px);
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: rgba(51, 65, 85, 0.8);
+  border-color: #94a3b8;
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.analiz-sonucu {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 8px;
+  border: 2px solid;
+}
+
+.analiz-sonucu.dolu {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  backdrop-filter: blur(10px);
+}
+
+.analiz-sonucu.bos {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+  backdrop-filter: blur(10px);
+}
+
+.analiz-sonucu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.analiz-sonucu-header h4 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.durum-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.durum-badge.dolu {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.durum-badge.bos {
+  background: #D1FAE5;
+  color: #16A34A;
+}
+
+.forklift-tespit-bilgi {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(0, 102, 204, 0.05);
+  border-radius: 6px;
+  border-left: 3px solid var(--corporate-blue);
+}
+
+.forklift-tespit-skoru {
+  color: var(--gray-700);
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.forklift-tespit-skoru strong {
+  color: var(--primary-black);
+  font-size: 16px;
+}
+
+.tespit-basari {
+  color: var(--success);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px 8px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 4px;
+}
+
+.tespit-hata {
+  color: var(--accent-red);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px 8px;
+  background: rgba(220, 53, 69, 0.1);
+  border-radius: 4px;
+}
+
+.guven-skoru {
+  color: var(--gray-700);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.guven-skoru strong {
+  color: var(--primary-black);
+  font-size: 16px;
+}
+
+.analiz-mesaj {
+  color: var(--gray-600);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.yuklenen-gorsel {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.yuklenen-gorsel-img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .forklift-gorsel-yukleme-section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .workstation-secim-wrapper,
+  .bildirimler-listesi,
+  .no-bildirim {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .forklift-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .forklift-tabs {
+    padding: 0 24px;
+    gap: 8px;
+  }
+
+  .forklift-tab {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .tab-badge {
+    font-size: 11px;
+    padding: 2px 6px;
+    min-width: 18px;
+  }
+
+  .forklift-gorsel-yukleme-section {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 24px;
+  }
+
+  .gorsel-yukleme-header h3 {
+    font-size: 18px;
+  }
+
+  .gorsel-yukleme-label {
+    min-height: 250px;
+  }
+
+  .gorsel-yukleme-placeholder {
+    height: 250px;
+  }
+
+  .upload-icon {
+    font-size: 48px;
+  }
+
+  .forklift-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 24px 32px;
+  }
+
+  .forklift-header h2 {
+    font-size: 28px;
+  }
+
+  .forkliftci-info {
+    font-size: 13px;
+  }
+
+  .hareket-durumu-badge {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .mesafe-bilgisi {
+    font-size: 11px;
+  }
+
+  .workstation-secim-wrapper {
+    padding: 0 24px;
+  }
+
+  .bildirimler-listesi {
+    padding: 0 24px 40px;
+  }
+
+  .bildirim-actions {
+    flex-direction: column;
+  }
+
+  .btn-onayla, .btn-reddet, .btn-kapat {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .bildirim-sure {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .kasa-detay {
+    grid-template-columns: 1fr;
+  }
+
+  .no-bildirim {
+    padding: 80px 24px;
+    margin: 0 24px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forklift-tabs {
+    padding: 0 16px;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .forklift-tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .tab-badge {
+    font-size: 10px;
+    padding: 1px 5px;
+    min-width: 16px;
+  }
+
+  .workstation-secim-wrapper {
+    padding: 0 16px;
+    margin-bottom: 32px;
+  }
+
+  .forklift-header {
+    padding: 24px 16px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .forklift-header h2 {
+    font-size: 20px;
+  }
+
+  .forkliftci-info {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hareket-durumu-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .mesafe-bilgisi {
+    font-size: 10px;
+  }
+
+  .bildirimler-listesi {
+    padding: 0 16px 32px;
+    gap: 16px;
+  }
+
+  .bildirim-card {
+    padding: 16px;
+  }
+
+  .bildirim-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bildirim-header h4 {
+    font-size: 16px;
+  }
+
+  .bildirim-tarih {
+    font-size: 11px;
+  }
+
+  .bildirim-workstation {
+    font-size: 12px;
+  }
+
+  .bildirim-detaylar {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .detay-item {
+    font-size: 12px;
+  }
+
+  .detay-item .label {
+    font-size: 11px;
+  }
+
+  .detay-item .value {
+    font-size: 14px;
+  }
+
+  .btn-onayla, .btn-reddet, .btn-kapat {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .bildirim-sure {
+    font-size: 10px;
+    padding: 6px 8px;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .tamamlandi-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .gecen-sure-label {
+    font-size: 12px;
+  }
+
+  .gecen-sure-deger {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .no-bildirim {
+    padding: 60px 24px;
+    margin: 0 16px 32px;
+  }
+
+  .no-bildirim-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .no-bildirim-icon::before {
+    font-size: 28px;
+  }
+
+  .no-bildirim h3 {
+    font-size: 18px;
+  }
+
+  .no-bildirim p {
+    font-size: 14px;
+  }
+
+  .forklift-gorsel-yukleme-section {
+    margin: 0 16px 32px;
+    padding: 16px;
+  }
+
+  .gorsel-yukleme-header {
+    margin-bottom: 16px;
+  }
+
+  .gorsel-yukleme-header h3 {
+    font-size: 16px;
+  }
+
+  .gorsel-yukleme-label {
+    min-height: 180px;
+    padding: 16px;
+  }
+
+  .gorsel-yukleme-placeholder {
+    height: 180px;
+  }
+
+  .upload-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .upload-text {
+    font-size: 13px;
+  }
+
+  .upload-hint {
+    font-size: 11px;
+  }
+
+  .analiz-sonucu {
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  .analiz-sonucu h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .analiz-sonucu p {
+    font-size: 13px;
+  }
+
+  .yuklenen-gorsel-img {
+    max-height: 200px;
+  }
+}
